@@ -1,4 +1,3 @@
-//vvgvgvgccg
 import React from 'react';
 
 interface RoleCardProps {
@@ -14,7 +13,7 @@ const RoleCard: React.FC<RoleCardProps> = ({ image, alt, role }) => {
       <p className="text-lg font-medium">{role}</p>
     </div>
   );
-  
+
 };
 
 export default RoleCard;
