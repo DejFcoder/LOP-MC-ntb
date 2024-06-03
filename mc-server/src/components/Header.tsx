@@ -5,6 +5,7 @@ import DarkModeContext from "../DarkModeContext";
 import LogoWhite from "../images/logoWhite.png";
 import LogoDark from "../images/logoDark.png";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import LanguageSelect from "./LanguageSelect";
 
 interface HeaderProps {}
 
@@ -16,6 +17,7 @@ const Header: FC<HeaderProps> = () => {
 
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isCopied, setIsCopied] = useState<boolean>(false);
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("EN");
 
   const handleCopy = () => {
     setIsCopied(true);
@@ -24,6 +26,10 @@ const Header: FC<HeaderProps> = () => {
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleLanguageChange = (lang: string) => {
+    setSelectedLanguage(lang);
   };
 
   return (
@@ -78,6 +84,9 @@ const Header: FC<HeaderProps> = () => {
               <i className="bx bx-moon text-3xl text-slate-700 mt-2 inline-flex items-center px-12"></i>
             )}
           </button>
+
+          <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={handleLanguageChange} />
+
           {isAuthenticated ? (
             <button
               className="inline-flex items-center px-12 py-3 text-lg font-semibold tracking-tighter text-black dark:text-white"
@@ -160,6 +169,9 @@ const Header: FC<HeaderProps> = () => {
               <i className="bx bx-moon text-3xl text-slate-700 inline-flex items-center"></i>
             )}
           </button>
+          <div className="relative inline-block text-left mt-4">
+            <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={handleLanguageChange} />
+          </div>
           {isAuthenticated ? (
             <button
               className="inline-flex items-center py-3 text-lg font-semibold tracking-tighter text-black dark:text-white mt-4"
