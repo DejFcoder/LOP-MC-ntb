@@ -1,8 +1,10 @@
 import { useState } from "react";
 import LobbyHeroImg from "../images/lobyHeroImg.png";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { useTranslation } from "react-i18next";
 
 function HeroSection() {
+  const { t } = useTranslation();
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   const handleCopy = () => {
@@ -19,8 +21,7 @@ function HeroSection() {
           </h2>
 
           <p className="mt-6 pr-5 max-w-2xl text-xl font-semibold text-[#404040] dark:text-gray-400">
-            Lorem ipsum urna, consectetur adipiscing elit. Urna risus hendrerit
-            dignissim duis fringilla
+          {t("desc")}
           </p>
           <CopyToClipboard text="mcLofP.com" onCopy={handleCopy}>
             <button

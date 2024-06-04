@@ -48,7 +48,9 @@ function Rules() {
           <h2 className="text-4xl mb-2 font-extrabold dark:text-white">
             {t("heading")}
           </h2>
-          <p className="mb-10 text-gray-500 dark:text-gray-400">{t("desc")}</p>
+          <p className="mb-10 text-gray-500 dark:text-gray-400">Při prvním připojení na server či registrací se uživatel zavazuje,
+            že si přečetl veškerá stanovená pravidla a bude je při působení na
+            serveru dodržovat.</p>
 
           <RuleBox title={"Základní Pravidla"} rules={basicRulesContent} />
           <RuleBox title={"Účet a herní klient"} rules={accountRulesContent} />
