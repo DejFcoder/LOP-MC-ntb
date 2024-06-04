@@ -6,6 +6,7 @@ import LogoWhite from "../images/logoWhite.png";
 import LogoDark from "../images/logoDark.png";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import LanguageSelect from "./LanguageSelect";
+import { useLanguage } from "../LanguageContext";
 
 interface HeaderProps {}
 
@@ -17,8 +18,8 @@ const Header: FC<HeaderProps> = () => {
 
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isCopied, setIsCopied] = useState<boolean>(false);
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("EN");
-
+  const { selectedLanguage, changeLanguage } = useLanguage(); 
+  
   const handleCopy = () => {
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
@@ -27,11 +28,7 @@ const Header: FC<HeaderProps> = () => {
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
-
-  const handleLanguageChange = (lang: string) => {
-    setSelectedLanguage(lang);
-  };
-
+  
   return (
     <div className="sticky top-0 z-50 grotesk mb-16 flex items-center justify-between px-4 sm:mx-0 sm:mb-20 sm:px-0 md:px-6 border-b-2 bg-white dark:bg-gray-900 dark:border-gray-400">
       <div className="inline-flex items-center pl-8">
@@ -85,7 +82,7 @@ const Header: FC<HeaderProps> = () => {
             )}
           </button>
 
-          <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={handleLanguageChange} />
+          <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={changeLanguage} />
 
           {isAuthenticated ? (
             <button
@@ -170,7 +167,7 @@ const Header: FC<HeaderProps> = () => {
             )}
           </button>
           <div className="relative inline-block text-left mt-4">
-            <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={handleLanguageChange} />
+            <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={changeLanguage} />
           </div>
           {isAuthenticated ? (
             <button
@@ -214,5 +211,6 @@ const Header: FC<HeaderProps> = () => {
     </div>
   );
 };
+
 
 export default Header;
