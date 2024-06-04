@@ -5,12 +5,6 @@ import { useTranslation } from "react-i18next";
 function Rules() {
   const { t } = useTranslation();
 
-  const languages = [
-    { code: "en", lang: "English" },
-    { code: "sk", lang: "Slovak" },
-    { code: "cz", lang: "Czech" },
-  ];
-
   const basicRulesContent: string[] = [
     "Hráč je povinen dodržovat veškerá pravidla serveru a souhlasí s ochranou osobních údajů (GDPR)",
     "Vedení projektu si nárokuje veškerá práva na jakoukoliv činnost související s projektem.",
@@ -47,26 +41,14 @@ function Rules() {
     "Při porušení pravidel serveru jsou členové adminteamu oprávněni udělit trest. Délka a způsob trestu je udělen podle závažnosti prohřešku",
   ];
 
-  const { i18n } = useTranslation();
-
-  const changeLanguage = (lng:string) => {
-    i18n.changeLanguage(lng);
-  };
   return (
     <Layout>
       <div className="w-full flex flex-col items-center min-h-screen">
-        {languages.map((lng) => (
-          <button key={lng.code} onClick={() => changeLanguage(lng.code)}>
-            {lng.lang}
-          </button>
-        ))}
         <div className="max-w-4xl mx-5">
           <h2 className="text-4xl mb-2 font-extrabold dark:text-white">
             {t("heading")}
           </h2>
-          <p className="mb-10 text-gray-500 dark:text-gray-400">
-            {t("desc")}
-          </p>
+          <p className="mb-10 text-gray-500 dark:text-gray-400">{t("desc")}</p>
 
           <RuleBox title={"Základní Pravidla"} rules={basicRulesContent} />
           <RuleBox title={"Účet a herní klient"} rules={accountRulesContent} />

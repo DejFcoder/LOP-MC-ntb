@@ -1,4 +1,5 @@
-import { useState, useContext, FC } from "react";
+
+import { useState, useContext, FC, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import AuthContext from "../AuthContext";
 import DarkModeContext from "../DarkModeContext";
@@ -6,7 +7,6 @@ import LogoWhite from "../images/logoWhite.png";
 import LogoDark from "../images/logoDark.png";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import LanguageSelect from "./LanguageSelect";
-import { useLanguage } from "../LanguageContext";
 
 interface HeaderProps {}
 
@@ -18,8 +18,17 @@ const Header: FC<HeaderProps> = () => {
 
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isCopied, setIsCopied] = useState<boolean>(false);
-  const { selectedLanguage, changeLanguage } = useLanguage(); 
-  
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("EN");
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("selectedLanguage");
+    if (savedLanguage) {
+      setSelectedLanguage(savedLanguage.toUpperCase());
+    } else {
+      setSelectedLanguage("EN");
+    }
+  }, []);
+
   const handleCopy = () => {
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
@@ -28,7 +37,10 @@ const Header: FC<HeaderProps> = () => {
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
-  
+
+  const handleLanguageChange = (lang: string) => {
+    setSelectedLanguage(lang);
+  };
   return (
     <div className="sticky top-0 z-50 grotesk mb-16 flex items-center justify-between px-4 sm:mx-0 sm:mb-20 sm:px-0 md:px-6 border-b-2 bg-white dark:bg-gray-900 dark:border-gray-400">
       <div className="inline-flex items-center pl-8">
@@ -82,7 +94,7 @@ const Header: FC<HeaderProps> = () => {
             )}
           </button>
 
-          <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={changeLanguage} />
+          <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={handleLanguageChange} />
 
           {isAuthenticated ? (
             <button
@@ -130,7 +142,7 @@ const Header: FC<HeaderProps> = () => {
         </button>
       </div>
       {menuOpen && (
-        <div className="flex flex-col items-center w-full xl:hidden bg-white dark:bg-gray-900 absolute top-full left-0 py-4 border-t-2 border-gray-200 dark:border-gray-700">
+        <div className="flex flex-col items-center w-full xl:hidden bg-white dark:bg-gray-900 absolute top-full left-0 py-4 border-t-2 border-t-gray-200 dark:border-t-gray-700 border-b-4 border-b-gray-700 dark:border-b-gray-200">
           <Link
             to="/"
             className="py-2 text-xl text-black hover:underline dark:text-white"
@@ -166,9 +178,11 @@ const Header: FC<HeaderProps> = () => {
               <i className="bx bx-moon text-3xl text-slate-700 inline-flex items-center"></i>
             )}
           </button>
+
           <div className="relative inline-block text-left mt-4">
-            <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={changeLanguage} />
+            <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={handleLanguageChange} />
           </div>
+
           {isAuthenticated ? (
             <button
               className="inline-flex items-center py-3 text-lg font-semibold tracking-tighter text-black dark:text-white mt-4"
@@ -211,6 +225,5 @@ const Header: FC<HeaderProps> = () => {
     </div>
   );
 };
-
 
 export default Header;

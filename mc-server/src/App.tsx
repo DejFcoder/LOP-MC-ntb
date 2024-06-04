@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./AuthContext";
 import { DarkModeProvider, useDarkMode } from "./DarkModeContext";
 import ScrollToTop from "./components/ScrollOnTop";
-import { LanguageProvider } from "./LanguageContext";
 
 import Home from "./pages/Home";
 import Recruitments from "./pages/Recruitments";
@@ -37,10 +36,8 @@ function App(): JSX.Element {
     <Router>
       <AuthProvider>
         <DarkModeProvider>
-          <LanguageProvider>
             <ScrollToTop />
             <AppContext />
-          </LanguageProvider>
         </DarkModeProvider>
       </AuthProvider>
     </Router>

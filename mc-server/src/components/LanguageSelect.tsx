@@ -1,7 +1,9 @@
-import { FC, useState } from "react";
+
+import { FC, useState, useEffect } from "react";
 import EN from "../images/en.png";
 import SK from "../images/sk.png";
 import CZ from "../images/cz.png";
+import { useTranslation } from "react-i18next";
 
 interface LanguageSelectProps {
   selectedLanguage: string;
@@ -10,15 +12,38 @@ interface LanguageSelectProps {
 
 const LanguageSelect: FC<LanguageSelectProps> = ({ selectedLanguage, onLanguageChange }) => {
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  const [currentLanguage, setCurrentLanguage] = useState<string>(selectedLanguage);
+
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("selectedLanguage");
+    if (savedLanguage) {
+      setCurrentLanguage(savedLanguage.toUpperCase());
+      i18n.changeLanguage(savedLanguage);
+    } else {
+      setCurrentLanguage("EN");
+      i18n.changeLanguage("en");
+    }
+  }, [i18n]);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
-  const handleLanguageClick = (lang: string) => {
+  const handleLanguageClick = (lang: string, lng: string) => {
+    setCurrentLanguage(lang);
     onLanguageChange(lang);
     setDropdownOpen(false);
+    i18n.changeLanguage(lng);
+    localStorage.setItem("selectedLanguage", lng);
   };
+
+  const languages = [
+    { code: "EN", identifier: "en", imgSrc: EN },
+    { code: "SK", identifier: "sk", imgSrc: SK },
+    { code: "CZ", identifier: "cz", imgSrc: CZ },
+  ];
 
   return (
     <div className="relative inline-block text-left">
@@ -31,8 +56,8 @@ const LanguageSelect: FC<LanguageSelectProps> = ({ selectedLanguage, onLanguageC
           aria-haspopup="true"
           onClick={toggleDropdown}
         >
-          <img src={selectedLanguage === "EN" ? EN : selectedLanguage === "SK" ? SK : CZ} alt={selectedLanguage} className="inline-block h-5 w-8 mr-2" />
-          {selectedLanguage}
+          <img src={currentLanguage === "EN" ? EN : currentLanguage === "SK" ? SK : CZ} alt={currentLanguage} className="inline-block h-5 w-8 mr-2" />
+          {currentLanguage}
           <svg
             className="-mr-1 ml-2 h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,27 +82,16 @@ const LanguageSelect: FC<LanguageSelectProps> = ({ selectedLanguage, onLanguageC
           tabIndex={-1}
         >
           <div className="py-1" role="none">
-            <button
-              className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:dark:bg-gray-800 hover:bg-gray-100 w-full text-left"
-              onClick={() => handleLanguageClick("EN")}
-            >
-              <img src={EN} alt="EN" className="inline-block h-5 w-8 mr-2" />
-              EN
-            </button>
-            <button
-              className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:dark:bg-gray-800 hover:bg-gray-100 w-full text-left"
-              onClick={() => handleLanguageClick("SK")}
-            >
-              <img src={SK} alt="SK" className="inline-block h-5 w-8 mr-2" />
-              SK
-            </button>
-            <button
-              className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:dark:bg-gray-800 hover:bg-gray-100 w-full text-left"
-              onClick={() => handleLanguageClick("CZ")}
-            >
-              <img src={CZ} alt="CZ" className="inline-block h-5 w-8 mr-2" />
-              CZ
-            </button>
+            {languages.map((language) => (
+              <button
+                key={language.code}
+                className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-400 hover:dark:bg-gray-800 hover:bg-gray-100 w-full text-left"
+                onClick={() => handleLanguageClick(language.code, language.identifier)}
+              >
+                <img src={language.imgSrc} alt={language.code} className="inline-block h-5 w-8 mr-2" />
+                {language.code}
+              </button>
+            ))}
           </div>
         </div>
       )}
