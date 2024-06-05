@@ -2,10 +2,12 @@ import { useContext, FC } from "react";
 import LogoWhite from "../images/logoWhite.png";
 import LogoDark from "../images/logoDark.png";
 import DarkModeContext from "../DarkModeContext";
+import { useTranslation } from "react-i18next";
 
 interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => {
+  const { t } = useTranslation("footer");
   const currentYear = new Date().getFullYear();
   const { darkMode } = useContext(DarkModeContext);
 
@@ -33,7 +35,7 @@ const Footer: FC<FooterProps> = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="https://flowbite.com/" className="hover:underline">
-                    IP Adresa
+                    {t('option1')}
                   </a>
                 </li>
                 <li>
@@ -41,14 +43,14 @@ const Footer: FC<FooterProps> = () => {
                     href="https://tailwindcss.com/"
                     className="hover:underline"
                   >
-                    VIP Shop
+                    {t('option2')}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Sledujte nás
+                {t("secondCol")}
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
@@ -71,17 +73,17 @@ const Footer: FC<FooterProps> = () => {
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Legal
+                {t("thirdCol")}
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    Privacy Policy
+                    {t("option5")}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:underline">
-                    Terms &amp; Conditions
+                    {t("option6")}
                   </a>
                 </li>
               </ul>

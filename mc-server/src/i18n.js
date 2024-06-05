@@ -12,4 +12,8 @@ i18n
     lng: "en",
     fallbackLng: "en",
     returnObject: true,
+    backend: {
+      loadPath: "/locales/{{lng}}/{{ns}}.json",
+    },
+    ns: ["header", "heroSection", "aboutSection", "footer", "rules", "recruitments", "VIPshop"],
   });

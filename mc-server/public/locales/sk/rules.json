@@ -1,0 +1,43 @@
+{
+  "heading": "Pravidlá Serveru",
+
+  "description": "Pri prvom pripojení na server či registráciou sa užívateľ zaväzuje, že si prečítal všetky stanovené pravidlá a bude ich pri pôsobení na serveri dodržiavať.",
+
+  "basicRulesTitles": "Základné Pravidlá",
+  "accountRulesTitles": "Účet a herný klient",
+  "chatRulesTitles": "Pravidlá Minecraft chatu",
+  "breakRulesTitles": "Porušenie pravidiel",
+
+  "basicRules": [
+    "Hráč je povinný dodržiavať všetky pravidlá servera a súhlasí s ochranou osobných údajov (GDPR).",
+    "Vedenie projektu si nárokuje všetky práva na akúkoľvek činnosť súvisiacu s projektom.",
+    "Hráč má zakázané úmyselne poškodzovať server akýmkoľvek spôsobom a získavať osobné informácie od ostatných hráčov.",
+    "Hráč zodpovedá za svoj účet a nastaví si dostatočne bezpečné heslo, aby mu nemohol byť ukradnutý.",
+    "Je prísne zakázané nabádať ostatných hráčov k porušovaniu pravidiel.",
+    "Je zakázané hľadať nedostatky v pravidlách a následne ich zneužívať."
+  ],
+  "accountRules": [
+    "Je zakázané používať akékoľvek klienty, ktoré zvýhodňujú daného hráča nad ostatnými (cheaty).",
+    "Povolený je iba oficiálny Minecraft launcher a špeciálne povolené klienty (Lunar alebo Labymod client).",
+    "Zakázané je taktiež používanie resource packu, ktorý zvýhodňuje daného hráča nad ostatnými (xray).",
+    "Je zakázané používať auto-click klienty a ďalšie špeciálne modifikácie myši vrátane makra.",
+    "Hráč musí dostatočne zabezpečiť svoj herný účet, aby k nemu nemohol získať prístup niekto cudzí.",
+    "Hráč nesmie používať 2 alebo viac účtov súčasne; porušenie sa nazýva 'multi-acc', ktoré je tiež trestané.",
+    "Je zakázané predávať svoj účet za reálne peniaze alebo herné predmety.",
+    "Je zakázané obchádzať zákaz za účelom vyhnúť sa trestu.",
+    "Meno hráča a skin musia byť zvolené v rámci pravidiel servera. Nesmú obsahovať vulgárne, urážlivé, rasistické, nacistické, fašistické, xenofóbne, sexistické alebo inak nevhodné prvky."
+  ],
+  "chatRules": [
+    "Je zakázané písať akékoľvek nevhodné správy do chatu; cenzúra týchto správ hráča neospravedlňuje.",
+    "Je zakázané nabádať alebo podnecovať ostatných hráčov k porušovaniu pravidiel.",
+    "Je zakázané posielať osobné údaje, ako napr. mená a priezviská, IP adresy, bydliská.",
+    "Je zakázané rozosielať akékoľvek webové odkazy, ktoré nie sú spojené so serverom.",
+    "Je zakázané propagovať alebo podporovať používanie zakázaných klientov, resource packov a autoclickerov v chate.",
+    "Je zakázaný akýkoľvek spam a dlhé správy bez výpovednej hodnoty.",
+    "Je zakázaná akákoľvek reklama na iné projekty, produkty alebo weby. Povolené sú iba odkazy na streamovacie platformy alebo platformy na vytváranie videí (YouTube, Twitch, Kick).",
+    "Hráč musí vždy dodržiavať pravidlá slušného správania na serveri."
+  ],
+  "breakRules": [
+    "Pri porušení pravidiel serveru sú členovia admin tímu oprávnení udeliť trest. Dĺžka a spôsob trestu sú určené podľa závažnosti prehrešku."
+  ]
+}

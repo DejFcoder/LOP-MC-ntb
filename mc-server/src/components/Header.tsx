@@ -1,19 +1,19 @@
-
 import { useState, useContext, FC, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import AuthContext from "../AuthContext";
-import DarkModeContext from "../DarkModeContext";
+import { useDarkMode } from "../DarkModeContext";
 import LogoWhite from "../images/logoWhite.png";
 import LogoDark from "../images/logoDark.png";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import LanguageSelect from "./LanguageSelect";
+import { useTranslation } from "react-i18next";
 
 interface HeaderProps {}
 
 const Header: FC<HeaderProps> = () => {
+  const { t } = useTranslation("header");
   const { isAuthenticated, logout } = useContext(AuthContext)!;
-  const darkModeContext = useContext(DarkModeContext);
-  const { darkMode, toggleDarkMode } = darkModeContext;
+  const { darkMode, toggleDarkMode } = useDarkMode();
   const location = useLocation();
 
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -62,25 +62,25 @@ const Header: FC<HeaderProps> = () => {
             to="/"
             className="pr-12 text-xl text-black hover:underline dark:text-white"
           >
-            Domov
+            {t("page1")}
           </Link>
           <Link
             to="/rules"
             className="pr-12 text-xl text-black hover:underline dark:text-white"
           >
-            Pravidlá
+            {t("page2")}
           </Link>
           <Link
             to="/recruitments"
             className="pr-12 text-xl text-black hover:underline dark:text-white"
           >
-            Nábory
+            {t("page3")}
           </Link>
           <Link
             to="/vipshop"
             className="text-xl text-black hover:underline hover:decoration-red-600 dark:text-white"
           >
-            VIP
+            {t("page4")}
           </Link>
         </div>
       </div>
@@ -94,14 +94,17 @@ const Header: FC<HeaderProps> = () => {
             )}
           </button>
 
-          <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={handleLanguageChange} />
+          <LanguageSelect
+            selectedLanguage={selectedLanguage}
+            onLanguageChange={handleLanguageChange}
+          />
 
           {isAuthenticated ? (
             <button
               className="inline-flex items-center px-12 py-3 text-lg font-semibold tracking-tighter text-black dark:text-white"
               onClick={logout}
             >
-              Odhlásiť sa
+              {t("logout")}
             </button>
           ) : (
             <Link
@@ -110,7 +113,7 @@ const Header: FC<HeaderProps> = () => {
                 location.pathname + location.search
               )}`}
             >
-              Prihlásiť sa
+              {t("login")}
             </Link>
           )}
           <CopyToClipboard text="mcLofP.com" onCopy={handleCopy}>
@@ -119,7 +122,7 @@ const Header: FC<HeaderProps> = () => {
                 className={`${isCopied ? "hidden" : "inline-flex"}`}
                 id="default-message2"
               >
-                Pripojiť sa
+                {t("connect")}
               </span>
               <span
                 className={`${
@@ -128,7 +131,7 @@ const Header: FC<HeaderProps> = () => {
                 id="success-message2"
               >
                 <i className="bx bx-check mr-1"></i>
-                Skopírované
+                {t("copied")}
               </span>
             </button>
           </CopyToClipboard>
@@ -148,28 +151,28 @@ const Header: FC<HeaderProps> = () => {
             className="py-2 text-xl text-black hover:underline dark:text-white"
             onClick={handleMenuToggle}
           >
-            Domov
+            {t("page1")}
           </Link>
           <Link
             to="/rules"
             className="py-2 text-xl text-black hover:underline dark:text-white"
             onClick={handleMenuToggle}
           >
-            Pravidlá
+            {t("page2")}
           </Link>
           <Link
             to="/recruitments"
             className="py-2 text-xl text-black hover:underline dark:text-white"
             onClick={handleMenuToggle}
           >
-            Nábory
+            {t("page3")}
           </Link>
           <Link
             to="/vipshop"
             className="py-2 text-xl text-black hover:underline hover:decoration-red-600 dark:text-white"
             onClick={handleMenuToggle}
           >
-            VIP
+            {t("page4")}
           </Link>
           <button onClick={toggleDarkMode} className="py-2 mt-4">
             {darkMode ? (
@@ -180,7 +183,10 @@ const Header: FC<HeaderProps> = () => {
           </button>
 
           <div className="relative inline-block text-left mt-4">
-            <LanguageSelect selectedLanguage={selectedLanguage} onLanguageChange={handleLanguageChange} />
+            <LanguageSelect
+              selectedLanguage={selectedLanguage}
+              onLanguageChange={handleLanguageChange}
+            />
           </div>
 
           {isAuthenticated ? (
@@ -188,7 +194,7 @@ const Header: FC<HeaderProps> = () => {
               className="inline-flex items-center py-3 text-lg font-semibold tracking-tighter text-black dark:text-white mt-4"
               onClick={logout}
             >
-              Odhlásiť sa
+              {t("logout")}
             </button>
           ) : (
             <Link
@@ -198,7 +204,7 @@ const Header: FC<HeaderProps> = () => {
               )}`}
               onClick={handleMenuToggle}
             >
-              Prihlásiť sa
+              {t("login")}
             </Link>
           )}
           <CopyToClipboard text="mcLofP.com" onCopy={handleCopy}>
@@ -207,7 +213,7 @@ const Header: FC<HeaderProps> = () => {
                 className={`${isCopied ? "hidden" : "inline-flex"}`}
                 id="default-message2"
               >
-                Pripojiť sa
+                {t("connect")}
               </span>
               <span
                 className={`${
@@ -216,7 +222,7 @@ const Header: FC<HeaderProps> = () => {
                 id="success-message2"
               >
                 <i className="bx bx-check mr-1"></i>
-                Skopírované
+                {t("copied")}
               </span>
             </button>
           </CopyToClipboard>

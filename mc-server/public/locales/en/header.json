@@ -1,0 +1,11 @@
+{
+    "page1" : "Home",
+    "page2" : "Rules",
+    "page3" : "Recruitments",
+    "page4" : "VIP",
+
+    "login" : "Sing in",
+    "logout" : "Log out",
+    "connect" : "Join",
+    "copied" : "Copied"
+}

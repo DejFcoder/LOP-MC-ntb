@@ -1,0 +1,11 @@
+{
+    "page1" : "Domov",
+    "page2" : "Pravidlá",
+    "page3" : "Nábory",
+    "page4" : "VIP",
+
+    "login" : "Prihlásiť sa",
+    "logout" : "Odhlásiť sa",
+    "connect" : "Pripojiť sa",
+    "copied" : "Zkopírované"
+}

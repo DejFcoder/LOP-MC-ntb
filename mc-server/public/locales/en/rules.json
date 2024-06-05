@@ -1,0 +1,43 @@
+{
+  "heading": "Server Rules",
+
+  "description" : "When connecting to the server for the first time or registering, the user undertakes to have read all the established rules and to comply with them when working on the server.",
+
+  "basicRulesTitles": "Basic Rules",
+  "accountRulesTitles": "Account and Game Client",
+  "chatRulesTitles": "Minecraft Chat Rules",
+  "breakRulesTitles": "Violation of Rules",
+
+  "basicRules": [
+    "The player is required to follow all server rules and agrees to data protection (GDPR).",
+    "The project management reserves all rights to any activity related to the project.",
+    "The player is prohibited from intentionally damaging the server in any way and from obtaining personal information from other players.",
+    "The player is responsible for their account and should set a sufficiently secure password to prevent it from being stolen.",
+    "It is strictly forbidden to incite other players to break the rules.",
+    "It is forbidden to look for loopholes in the rules and then exploit them."
+  ],
+  "accountRules": [
+    "It is forbidden to use any clients that give the player an advantage over others (cheats).",
+    "Only the official Minecraft launcher and specially approved clients (Lunar or Labymod client) are allowed.",
+    "It is also forbidden to use a resource pack that gives the player an advantage over others (x-ray).",
+    "It is forbidden to use auto-click clients and other special mouse modifications, including macros.",
+    "The player must sufficiently secure their game account to prevent unauthorized access.",
+    "The player is not allowed to use 2 or more accounts simultaneously; violation is known as 'multi-acc', which is also punishable.",
+    "It is forbidden to sell your account for real money or in-game items.",
+    "It is forbidden to bypass a ban to avoid punishment.",
+    "The player's name and skin must be chosen within the bounds so that they do not violate server rules. They must not contain vulgar, offensive, racist, Nazi, fascist, xenophobic, sexist, or otherwise inappropriate elements."
+  ],
+  "chatRules": [
+    "It is forbidden to write any inappropriate messages in the chat; censoring these messages does not excuse the player.",
+    "It is forbidden to incite or encourage other players to break the rules.",
+    "It is forbidden to send personal data, such as names and surnames, IP addresses, residences.",
+    "It is forbidden to send any web links that are not related to the server.",
+    "It is forbidden to promote or support the use of prohibited clients, resource packs, and autoclickers in the chat.",
+    "All spam and long messages without informational value are prohibited.",
+    "Any advertising for other projects, products, or websites is prohibited. Only links to streaming platforms or video creation platforms (YouTube, Twitch, Kick) are allowed.",
+    "The player must always follow the rules of decent behavior on the server."
+  ],
+  "breakRules": [
+    "When server rules are violated, the admin team members are authorized to impose a punishment. The length and type of punishment are determined based on the severity of the offense."
+  ]
+}

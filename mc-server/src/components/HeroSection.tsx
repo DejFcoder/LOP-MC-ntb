@@ -4,7 +4,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useTranslation } from "react-i18next";
 
 function HeroSection() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("heroSection");
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   const handleCopy = () => {
@@ -21,7 +21,7 @@ function HeroSection() {
           </h2>
 
           <p className="mt-6 pr-5 max-w-2xl text-xl font-semibold text-[#404040] dark:text-gray-400">
-          {t("desc")}
+          {t("description")}
           </p>
           <CopyToClipboard text="mcLofP.com" onCopy={handleCopy}>
             <button
@@ -31,7 +31,7 @@ function HeroSection() {
                 className={`${isCopied ? "hidden" : "inline-flex"}`}
                 id="default-message2"
               >
-                Pripojiť sa
+                {t("connect")}
               </span>
               <span
                 className={`${
@@ -40,7 +40,7 @@ function HeroSection() {
                 id="success-message2"
               >
                 <i className="bx bx-check mr-1"></i>
-                Skopírované
+                {t("copied")}
               </span>
             </button>
           </CopyToClipboard>
