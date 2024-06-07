@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import AuthContext from "../AuthContext";
+import { useTranslation } from "react-i18next";
 
 interface PackageCardProps {
   title: string;
@@ -19,6 +20,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
 }) => {
   const authContext = useContext(AuthContext);
   const location = useLocation();
+  const { t } = useTranslation("VIPshop");
 
   const isAuthenticated = authContext?.isAuthenticated;
 
@@ -33,7 +35,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
         </p>
         <div className="mt-10 flex items-center gap-x-4">
           <h4 className="flex-none text-sm font-semibold leading-6 text-blue-600">
-            Zahrňuje výhody
+            {t("featuresHeading")}
           </h4>
           <div className="h-px flex-auto bg-gray-100" />
         </div>
@@ -70,7 +72,7 @@ const PackageCard: React.FC<PackageCardProps> = ({
                 to="/vipshop/package1"
                 className="mt-10 block w-full rounded-md bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
-                Kúpiť
+                {t("buyBtn")}
               </Link>
             ) : (
               <Link
@@ -79,11 +81,11 @@ const PackageCard: React.FC<PackageCardProps> = ({
                 )}/package1 `}
                 className="mt-10 block w-full rounded-md bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
-                Kúpiť
+                {t("buyBtn")}
               </Link>
             )}
             <p className="mt-6 text-xs leading-5 text-gray-600 dark:text-gray-400">
-              Invoices and receipts available for easy company reimbursement
+              {t("CardDesc")}
             </p>
           </div>
         </div>

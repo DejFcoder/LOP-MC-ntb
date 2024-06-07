@@ -1,0 +1,40 @@
+{
+  "heading": "VIP shop",
+  "description": "This VIP serves as a huge support for the Legends of Paragon server and everyone involved in the server. If you purchase one of these VIPs, we sincerely thank you.",
+  "featuresHeading": "Includes benefits",
+  "buyBtn": "Buy",
+  "CardDesc": "Invoices and receipts available for easy company reimbursement",
+
+  "titlePrime": "Prime Package",
+  "descriptionPrime": "Get a Prime account for 30 days on our Minecraft server and Discord. When purchasing the same rank, it will automatically extend!",
+  "featuresPrime": [
+    "Prefix PRIME",
+    "30,000 Coins",
+    "30% coins booster",
+    "30% discount on all cosmetics"
+  ],
+  "pricePrime": "€3.50",
+  "pricePeriodPrime": "Buy once, use for 30 days",
+
+  "titlePlus": "Prime+ Package",
+  "descriptionPlus": "Get a Prime+ account for 30 days on our Minecraft server and Discord. When purchasing the same rank, it will automatically extend!",
+  "featuresPlus": [
+    "Prefix PRIME+",
+    "50,000 Coins",
+    "50% coins booster",
+    "50% discount on all cosmetics"
+  ],
+  "pricePlus": "€5.00",
+  "pricePeriodPlus": "Buy once, use for 30 days",
+
+  "titlePro": "PrimePro Package",
+  "descriptionPro": "Get a PrimePro account for 30 days on our Minecraft server and Discord. When purchasing the same rank, it will automatically extend!",
+  "featuresPro": [
+    "Prefix PRIME PRO",
+    "75,000 Coins",
+    "75% coins booster",
+    "75% discount on all cosmetics"
+  ],
+  "pricePro": "€7.50",
+  "pricePeriodPro": "Buy once, use for 30 days"
+}

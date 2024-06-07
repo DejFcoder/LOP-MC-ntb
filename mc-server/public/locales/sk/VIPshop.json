@@ -1,0 +1,40 @@
+{
+  "heading": "VIP obchod",
+  "description": "Tento VIP slúži ako obrovská podpora pre server Legends of Paragon a všetkých, ktorí sú na serveri zapojení. Ak si zakúpite jednu z týchto VIP, úprimne vám ďakujeme.",
+  "featuresHeading": "Zahrňuje výhody",
+  "buyBtn": "Kúpiť",
+  "CardDesc": "Faktúry a účtenky k dispozícii pre ľahké preplatenie spoločnosti",
+
+  "titlePrime": "Prime Balíček",
+  "descriptionPrime": "Získate Prime účet na 30 dní na našom Minecraft serveri a Discorde. Pri zakúpení rovnakého ranku sa vám automaticky predĺži!",
+  "featuresPrime": [
+    "Prefix PRIME",
+    "30 000 Mince",
+    "30% booster mincí",
+    "30% zľava na všetky kozmetiky"
+  ],
+  "pricePrime": "€3.50",
+  "pricePeriodPrime": "Kúp raz, 30 dní využívaj",
+
+  "titlePlus": "Prime+ Balíček",
+  "descriptionPlus": "Získate Prime+ účet na 30 dní na našom Minecraft serveri a Discorde. Pri zakúpení rovnakého ranku sa vám automaticky predĺži!",
+  "featuresPlus": [
+    "Prefix PRIME+",
+    "50 000 Mince",
+    "50% booster mincí",
+    "50% zľava na všetky kozmetiky"
+  ],
+  "pricePlus": "€5.00",
+  "pricePeriodPlus": "Kúp raz, 30 dní využívaj",
+
+  "titlePro": "PrimePro Balíček",
+  "descriptionPro": "Získate PrimePro účet na 30 dní na našom Minecraft serveri a Discorde. Pri zakúpení rovnakého ranku sa vám automaticky predĺži!",
+  "featuresPro": [
+    "Prefix PRIME PRO",
+    "75 000 Mince",
+    "75% booster mincí",
+    "75% zľava na všetky kozmetiky"
+  ],
+  "pricePro": "€7.50",
+  "pricePeriodPro": "Kúp raz, 30 dní využívaj"
+}
