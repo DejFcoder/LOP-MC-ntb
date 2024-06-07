@@ -1,0 +1,38 @@
+{
+  "heading": "Recruitments",
+
+  "builderTitle": "Recruitment - Builder",
+  "builderContent": [
+    "Player Nickname",
+    "Age",
+    "Something about yourself",
+    "Amount of free time",
+    "Experience with building plugins (world edit, armor stand edit, ...)",
+    "Previous building experience, former positions in admin teams on other projects, your achievements",
+    "Photos of builds",
+    "Having a functional microphone, having original Minecraft, being willing to develop your building skills, possibly knowledge of building plugins."
+  ],
+
+  "helperTitle": "Recruitment - Helper",
+  "helperContent": [
+    "Player Nickname",
+    "Age",
+    "Something about yourself",
+    "Amount of free time",
+    "Why we should choose you",
+    "Your experience with Minecraft, how long you have been playing, your former positions in admin teams on other projects, your achievements",
+    "Having a functional microphone, having original Minecraft, being willing to help admin team members and players who need assistance, being willing to develop your communication skills."
+  ],
+
+  "developerTitle": "Recruitment - Developer",
+  "developerContent": [
+    "Player Nickname",
+    "Age",
+    "Something about yourself",
+    "Amount of free time",
+    "Experience with development tools (world edit, armor stand edit, ...)",
+    "Previous development experience, former positions in admin teams on other projects, your achievements",
+    "Photos of builds",
+    "Having a functional microphone, having original Minecraft, being willing to develop your development skills, possibly knowledge of development tools."
+  ]
+}

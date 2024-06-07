@@ -6,47 +6,6 @@ import { useTranslation } from "react-i18next";
 
 const VIPshop: React.FC = () => {
   const { t } = useTranslation();
-  const packages: Package[] = [
-    {
-      title: "Prime Package",
-      description:
-        "Získáš Prime účet na 30 dní na našem Minecraft serveru a Discordu. Při zakoupení stejného ranku se ti automaticky prodlouží!",
-      features: [
-        "Prefix PRIME",
-        "30 000 Coins",
-        "30% coins booster",
-        "30% sleva na všechny cosmetics",
-      ],
-      price: "€3.50",
-      pricePeriod: "Kúp raz, 30 dní využívej",
-    },
-    {
-      title: "Prime+ Package",
-      description:
-        "Získáš Prime+ účet na 30 dní na našem Minecraft serveru a Discordu. Při zakoupení stejného ranku se ti automaticky prodlouží!",
-      features: [
-        "Prefix PRIME+",
-        "50 000 Coins",
-        "50% coins booster",
-        "50% sleva na všechny cosmetics",
-      ],
-      price: "€5.00",
-      pricePeriod: "Kúp raz, 30 dní využívej",
-    },
-    {
-      title: "PrimePro Package",
-      description:
-        "Získáš PrimePro účet na 30 dní na našem Minecraft serveru a Discordu. Při zakoupení stejného ranku se ti automaticky prodlouží!",
-      features: [
-        "Prefix PRIME PRO",
-        "75 000 Coins",
-        "75% coins booster",
-        "75% sleva na všechny cosmetics",
-      ],
-      price: "€7.50",
-      pricePeriod: "Kúp raz, 30 dní využívej",
-    },
-  ];
 
   return (
     <Layout>

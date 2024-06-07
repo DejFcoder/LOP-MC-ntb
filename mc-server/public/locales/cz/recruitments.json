@@ -1,0 +1,38 @@
+{
+  "heading": "Nábory",
+
+  "builderTitle": "Nábor - Builder",
+  "builderContent": [
+    "Nick hráče",
+    "Věk",
+    "Něco o sobě",
+    "Množství volného času",
+    "Zkušenosti se stavitelskými pluginy (world edit, armor stand edit, ...)",
+    "Předcházející zkušenosti se stavěním, bývalé pozice v admin teamu na jiných projektech, tvé úspěchy",
+    "Fotky staveb",
+    "Mít funkční mikrofon, mít originální Minecraft, být ochotný rozvíjet své stavitelské dovednosti, případně znalosti se stavitelskými pluginy."
+  ],
+
+  "helperTitle": "Nábor - Helper",
+  "helperContent": [
+    "Nick hráče",
+    "Věk",
+    "Něco o sobě",
+    "Množství volného času",
+    "Proč bychom měli vzít právě tebe",
+    "Tvé zkušenosti s Minecraftem, jak dlouho hraješ, tvé bývalé pozice v admin teamu na jiných projektech, tvé úspěchy",
+    "Mít funkční mikrofon, mít originální Minecraft, být ochotný pomáhat členům admin teamu a hráčům, kteří si neví s něčím rady, být ochotný rozvíjet své komunikační dovednosti."
+  ],
+
+  "developerTitle": "Nábor - Developer",
+  "developerContent": [
+    "Nick hráče",
+    "Věk",
+    "Něco o sobě",
+    "Množství volného času",
+    "Zkušenosti s vývojovými nástroji (world edit, armor stand edit, ...)",
+    "Předcházející zkušenosti s vývojem, bývalé pozice v admin teamu na jiných projektech, tvé úspěchy",
+    "Fotky staveb",
+    "Mít funkční mikrofon, mít originální Minecraft, být ochotný rozvíjet své vývojové dovednosti, případně znalosti s vývojovými nástroji."
+  ]
+}

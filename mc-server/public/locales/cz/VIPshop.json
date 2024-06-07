@@ -1,0 +1,40 @@
+{
+        "heading" : "",
+        "description" : "",
+        "featuresHeading" : "",
+        "buyBtn" : "",
+        "CardDesc" : "",
+
+      "titlePrime": "Prime Package",
+      "descriptionPrime": "Získáš Prime účet na 30 dní na našem Minecraft serveru a Discordu. Při zakoupení stejného ranku se ti automaticky prodlouží!",
+      "featuresPrime": [
+        "Prefix PRIME",
+        "30 000 Coins",
+        "30% coins booster",
+        "30% sleva na všechny cosmetics"
+      ],
+      "pricePrime": "€3.50",
+      "pricePeriodPrime": "Kúp raz, 30 dní využívej",
+
+      "titlePlus": "Prime+ Package",
+      "descriptionPlus": "Získáš Prime+ účet na 30 dní na našem Minecraft serveru a Discordu. Při zakoupení stejného ranku se ti automaticky prodlouží!",
+      "featuresPlus": [
+        "Prefix PRIME+",
+        "50 000 Coins",
+        "50% coins booster",
+        "50% sleva na všechny cosmetics"
+      ],
+      "pricePlus": "€5.00",
+      "pricePeriodPlus": "Kúp raz, 30 dní využívej",
+
+      "titlePro": "PrimePro Package",
+      "descriptionPro": "Získáš PrimePro účet na 30 dní na našem Minecraft serveru a Discordu. Při zakoupení stejného ranku se ti automaticky prodlouží!",
+      "featuresPro": [
+        "Prefix PRIME PRO",
+        "75 000 Coins",
+        "75% coins booster",
+        "75% sleva na všechny cosmetics"
+      ],
+      "pricePro": "€7.50",
+      "pricePeriodPro": "Kúp raz, 30 dní využívej"
+  }
