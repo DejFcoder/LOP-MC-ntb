@@ -1,11 +1,11 @@
 // pages/VIPshop.tsx
 import React from "react";
 import Layout from "../layouts/Layout";
-import PackageCard, { Package } from "../components/PackageCard";
+import PackageCard from "../components/PackageCard";
 import { useTranslation } from "react-i18next";
 
 const VIPshop: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("VIPshop");
 
   return (
     <Layout>
@@ -24,16 +24,13 @@ const VIPshop: React.FC = () => {
       <div className="mb-24">
         <div className="pb-5 sm:pb-5">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            {packages.map((pkg: Package, index: number) => (
               <PackageCard
-                key={index}
-                title={pkg.title}
-                description={pkg.description}
-                features={pkg.features}
-                price={pkg.price}
-                pricePeriod={pkg.pricePeriod}
+                title={t("titlePrime")}
+                description={t("descriptionPrime")}
+                features={t("featuresPrime", {returnObjects: true})}
+                price={t("pricePrime")}
+                pricePeriod={t("pricePeriodPrime")}
               />
-            ))}
           </div>
         </div>
       </div>

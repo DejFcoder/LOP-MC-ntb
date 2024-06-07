@@ -2,16 +2,13 @@ import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import AuthContext from "../AuthContext";
 
-// components/PackageCard.tsx
-export interface Package {
+interface PackageCardProps {
   title: string;
   description: string;
   features: string[];
   price: string;
   pricePeriod: string;
 }
-
-interface PackageCardProps extends Package {}
 
 const PackageCard: React.FC<PackageCardProps> = ({
   title,
