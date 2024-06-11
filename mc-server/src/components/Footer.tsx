@@ -1,8 +1,9 @@
-import { useContext, FC } from "react";
+import { useContext, FC, useState } from "react";
 import LogoWhite from "../images/logoWhite.png";
 import LogoDark from "../images/logoDark.png";
 import DarkModeContext from "../DarkModeContext";
 import { useTranslation } from "react-i18next";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 interface FooterProps {}
 
@@ -10,6 +11,12 @@ const Footer: FC<FooterProps> = () => {
   const { t } = useTranslation("footer");
   const currentYear = new Date().getFullYear();
   const { darkMode } = useContext(DarkModeContext);
+  const [isCopied, setIsCopied] = useState<boolean>(false);
+
+  const handleCopy = () => {
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
+  };
 
   return (
     <footer className="bg-zinc-50 dark:bg-gray-900 border-t-2 dark:border-gray-500">
@@ -34,16 +41,32 @@ const Footer: FC<FooterProps> = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
-                    {t('option1')}
-                  </a>
+                  <CopyToClipboard text="mcLofP.com" onCopy={handleCopy}>
+                      <span className="cursor-pointer hover:underline">
+                      <span
+                        className={`${isCopied ? "hidden" : "inline-flex"} cursor-pointer hover:underline`}
+                        id="default-message2"
+                      >
+                        {t("option1")}
+                      </span>
+                      <span
+                        className={`${
+                          isCopied ? "inline-flex" : "hidden"
+                        } items-center`}
+                        id="success-message2"
+                      >
+                        <i className="bx bx-check mr-1"></i>
+                        {t("copied")}
+                      </span>
+                      </span>
+                  </CopyToClipboard>
                 </li>
                 <li>
                   <a
                     href="https://tailwindcss.com/"
                     className="hover:underline"
                   >
-                    {t('option2')}
+                    {t("option2")}
                   </a>
                 </li>
               </ul>
@@ -100,22 +123,37 @@ const Footer: FC<FooterProps> = () => {
               href="#"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
-              <svg
-                className="w-4 h-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 8 19"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <i className="bx bxl-facebook text-slate-400 hover:text-slate-500 dark:text-slate-600 text-2xl dark:hover:text-slate-500"></i>
               <span className="sr-only">Facebook page</span>
             </a>
-            {/* Add other social media links similarly */}
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ml-2"
+            >
+              <i className="bx bxl-instagram text-slate-400 hover:text-slate-500 dark:text-slate-600 text-2xl dark:hover:text-slate-500"></i>
+              <span className="sr-only">Instagram page</span>
+            </a>
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ml-2"
+            >
+              <i className="bx bxl-linkedin text-slate-400 hover:text-slate-500 dark:text-slate-600 text-2xl dark:hover:text-slate-500"></i>
+              <span className="sr-only">Linkedin page</span>
+            </a>
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ml-2"
+            >
+              <i className="bx bxl-discord-alt text-slate-400 hover:text-slate-500 dark:text-slate-600 text-2xl dark:hover:text-slate-500"></i>
+              <span className="sr-only">Discord page</span>
+            </a>
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ml-2"
+            >
+              <i className="bx bxl-youtube text-slate-400 hover:text-slate-500 dark:text-slate-600 text-2xl dark:hover:text-slate-500"></i>
+              <span className="sr-only">Youtube page</span>
+            </a>
           </div>
         </div>
       </div>
