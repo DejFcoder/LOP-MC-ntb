@@ -4,6 +4,7 @@ import LogoDark from "../images/logoDark.png";
 import DarkModeContext from "../DarkModeContext";
 import { useTranslation } from "react-i18next";
 import CopyToClipboard from "react-copy-to-clipboard";
+import { Link } from "react-router-dom";
 
 interface FooterProps {}
 
@@ -42,9 +43,11 @@ const Footer: FC<FooterProps> = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <CopyToClipboard text="mcLofP.com" onCopy={handleCopy}>
-                      <span className="cursor-pointer hover:underline">
+                    <span className="cursor-pointer hover:underline">
                       <span
-                        className={`${isCopied ? "hidden" : "inline-flex"} cursor-pointer hover:underline`}
+                        className={`${
+                          isCopied ? "hidden" : "inline-flex"
+                        } cursor-pointer hover:underline`}
                         id="default-message2"
                       >
                         {t("option1")}
@@ -58,16 +61,13 @@ const Footer: FC<FooterProps> = () => {
                         <i className="bx bx-check mr-1"></i>
                         {t("copied")}
                       </span>
-                      </span>
+                    </span>
                   </CopyToClipboard>
                 </li>
                 <li>
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
+                  <Link to="/vipshop" className="hover:underline">
                     {t("option2")}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -78,17 +78,14 @@ const Footer: FC<FooterProps> = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
+                    href="https://www.instagram.com/"
                     className="hover:underline "
                   >
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://discord.gg/4eeurUVvTy"
-                    className="hover:underline"
-                  >
+                  <a href="https://discord.com/" className="hover:underline">
                     Discord
                   </a>
                 </li>
@@ -120,35 +117,40 @@ const Footer: FC<FooterProps> = () => {
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a
-              href="#"
+              target="_blank"
+              href="https://www.facebook.com/"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <i className="bx bxl-facebook text-slate-400 hover:text-slate-500 dark:text-slate-600 text-2xl dark:hover:text-slate-500"></i>
               <span className="sr-only">Facebook page</span>
             </a>
             <a
-              href="#"
+              target="_blank"
+              href="https://www.instagram.com"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ml-2"
             >
               <i className="bx bxl-instagram text-slate-400 hover:text-slate-500 dark:text-slate-600 text-2xl dark:hover:text-slate-500"></i>
               <span className="sr-only">Instagram page</span>
             </a>
             <a
-              href="#"
+              target="_blank"
+              href="https://www.linkedin.com/"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ml-2"
             >
               <i className="bx bxl-linkedin text-slate-400 hover:text-slate-500 dark:text-slate-600 text-2xl dark:hover:text-slate-500"></i>
               <span className="sr-only">Linkedin page</span>
             </a>
             <a
-              href="#"
+              target="_blank"
+              href="https://discord.com/"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ml-2"
             >
               <i className="bx bxl-discord-alt text-slate-400 hover:text-slate-500 dark:text-slate-600 text-2xl dark:hover:text-slate-500"></i>
               <span className="sr-only">Discord page</span>
             </a>
             <a
-              href="#"
+              target="_blank"
+              href="https://www.youtube.com/"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ml-2"
             >
               <i className="bx bxl-youtube text-slate-400 hover:text-slate-500 dark:text-slate-600 text-2xl dark:hover:text-slate-500"></i>
